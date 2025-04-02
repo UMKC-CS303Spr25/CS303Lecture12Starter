@@ -8,10 +8,13 @@ template<typename ItemType>
 class BinarySearchTree : public BinaryTree<ItemType> {
 
 public:
+	std::vector<ItemType> getVector();
+
+	//wrapper functions
 	ItemType* find(const ItemType& item) { return find(this->root, item); }
 	ItemType* findMin() { return findMin(this->root); }
 	ItemType* findMax() { return findMax(this->root); }
-	std::vector<ItemType> getVector();
+	
 	bool insert(const ItemType& item) { return insert(this->root, item); }
 	BinarySearchTree<ItemType> readFromVector(std::vector<ItemType>&);
 	bool erase(const ItemType& item) { return erase(this->root, item); }
@@ -33,16 +36,13 @@ private:
 
 template<typename ItemType>
 ItemType* BinarySearchTree<ItemType>::find(BTNode<ItemType>* root, const ItemType& item) {
-
+	return nullptr;
 	//if root is null, return null
-	if (root == nullptr)
-		return nullptr;
-
-	//if value found return root->data
  
+	//if value found return root->data
 
 	//else determine which side the element should be
- 
+
 
 }
 //TASK 2
@@ -71,7 +71,7 @@ ItemType* BinarySearchTree<ItemType>::findMin(BTNode<ItemType>* root) {
 //      else return the address of the righttmost node
 template<typename ItemType>
 ItemType* BinarySearchTree<ItemType>::findMax(BTNode<ItemType>* root) {
-	cout << "Code this!\n";
+	std::cout << "Code this!\n";
 	//Base case 1: if root is null, return null
 	if (root == nullptr)
 		return nullptr;
@@ -113,7 +113,7 @@ std::vector<ItemType> BinarySearchTree<ItemType>::getVector() {
 template<typename ItemType>
 bool BinarySearchTree<ItemType>::insert(BTNode<ItemType>* &root, const ItemType& item) {
 
-	cout << "Code this!\n";
+	std::cout << "Code this!\n";
 
 	if (root == nullptr) {
 		root = new BTNode<ItemType>(item);
@@ -155,7 +155,7 @@ BTNode<ItemType>* BinarySearchTree<ItemType>::readFromVector(std::vector<ItemTyp
 	BTNode<ItemType>* leftPtr = nullptr;
 	BTNode<ItemType>* rightPtr = nullptr;
 
-	cout << "Code this!\n";
+	std::cout << "Code this!\n";
 
 	return root;
 }
