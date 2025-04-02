@@ -46,10 +46,12 @@ int main() {
         cout << "Unable to find value: " << findKey << "\n";
     else
         cout << "Found key value: " << *keyFound << endl;
-    /*
+ 
     //TASK 2 Find Min & Max Numbers
-    cout << "Min Value: " << *(myTree.findMin()) << endl;
-    cout << "Max Value: " << *(myTree.findMax()) << endl;
+    if (myTree.findMin())
+        cout << "Min Value: " << *(myTree.findMin()) << endl;
+    if (myTree.findMax())
+        cout << "Max Value: " << *(myTree.findMax()) << endl;
 
 
     //TASK 3 Get Vector
@@ -85,6 +87,6 @@ int main() {
     for (auto i : newList2)
         cout << i << " ";
     cout << endl;
-    */
+
 }
 

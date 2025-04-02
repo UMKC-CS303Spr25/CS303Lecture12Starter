@@ -72,6 +72,8 @@ ItemType* BinarySearchTree<ItemType>::findMin(BTNode<ItemType>* root) {
 template<typename ItemType>
 ItemType* BinarySearchTree<ItemType>::findMax(BTNode<ItemType>* root) {
 	std::cout << "Code this!\n";
+	return nullptr;
+
 	//Base case 1: if root is null, return null
 	if (root == nullptr)
 		return nullptr;
@@ -114,6 +116,7 @@ template<typename ItemType>
 bool BinarySearchTree<ItemType>::insert(BTNode<ItemType>* &root, const ItemType& item) {
 
 	std::cout << "Code this!\n";
+	return false;
 
 	if (root == nullptr) {
 		root = new BTNode<ItemType>(item);
@@ -187,7 +190,8 @@ void replaceParent(BTNode<ItemType>*& oldRoot, BTNode<ItemType>*& root) {
 
 template<typename ItemType>
 bool BinarySearchTree<ItemType>::erase(BTNode<ItemType>* root, const ItemType& item) {
-	
+	return false;
+
 	//case 1: Item is not in the tree
 	if (root == nullptr)
 		return false;
