@@ -39,14 +39,10 @@ ItemType* BinarySearchTree<ItemType>::find(BTNode<ItemType>* root, const ItemTyp
 		return nullptr;
 
 	//if value found return root->data
-	if (root->data == item)
-		return &root->data;
+ 
 
 	//else determine which side the element should be
-	if (root->data > item)
-		find(root->left, item);
-	else
-		find(root->right, item);
+ 
 
 }
 //TASK 2
@@ -95,8 +91,12 @@ template<typename ItemType>
 std::vector<ItemType> BinarySearchTree<ItemType>::getVector() {
 	std::vector<ItemType> theList;
 	ItemType tempStr;
+
+	//save inorder listing to a string 
 	std::string inOrder = BinaryTree<ItemType>::inOrder();
 
+	//convert to stringstream
+	//get each value push onto the return vector
 	std::stringstream inSS(inOrder);
 	while (inSS >> tempStr) {
 		theList.push_back(tempStr);
@@ -119,6 +119,12 @@ bool BinarySearchTree<ItemType>::insert(BTNode<ItemType>* &root, const ItemType&
 		root = new BTNode<ItemType>(item);
 		return true;
 	}
+
+	//if item is > data at the current node ->go right
+
+	//else if the item is < data at current node ->go left
+
+	//else the item is in the tree, return false
 
 }
 //TASK 5
@@ -149,14 +155,7 @@ BTNode<ItemType>* BinarySearchTree<ItemType>::readFromVector(std::vector<ItemTyp
 	BTNode<ItemType>* leftPtr = nullptr;
 	BTNode<ItemType>* rightPtr = nullptr;
 
-	if (mid > first)
-		leftPtr = readFromVector(v1, first, mid - 1);
-
-	if (mid < last)
-		rightPtr = readFromVector(v1, mid + 1, last);
-
-	if (mid < v1.size())  
-		root = new BTNode<ItemType>(v1[mid], leftPtr, rightPtr);
+	cout << "Code this!\n";
 
 	return root;
 }
